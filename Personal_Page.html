@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Home_page.css">
+    <link rel="stylesheet" href="css/Personal_page.css">
+    <link rel="short icon" href="images/QQm.jpg"><!-- 网页图标 -->
+    <title>QQ音乐-我的音乐</title>
+    <script type="text/javascript" src="js/Home_page.js"></script>
+    <script type="text/javascript" src="js/Personal_page.js"></script>
+</head>
+<body>
+    <div class="Home_wrap">
+    <!------------------------------------ 导航栏 --------------------------------------->
+        <div class="header">
+            <div class="nav_inner">
+                <div class="nav_top">
+                    <h1 class="logo">
+                        <a href="#"><img src="images/logo.png" alt="" /></a>
+                    </h1>
+                    <ul class="top_nav_item">
+                        <li><a href="Home_Page.html" title ="音乐馆">音乐馆</a></li>
+                        <li><a href="#" class="current" title="我的音乐">我的音乐</a></li>
+                        <li><a href="https://y.qq.com/download/index.html" target="_blank" title="客户端">客户端</a></li>
+                        <li><a href="https://y.qq.com/artists" target="_blank" title="开放平台">开放平台</a></li>
+                        <li><a href="https://y.qq.com/portal/vipportal/index.html" target="_blank" title="VIP">VIP</a></li>
+                    </ul>
+                    <div class="search">
+                        <div class="search_input">
+                            <input type="text" id="search_txt" placeholder="搜索音乐、MV、歌单、用户" />
+                            <a onclick="Search()">
+                                <img class="find" src="./images/search.png" alt="搜索">
+                            </a>
+                        </div>
+                        <i></i>
+                    </div>
+                    <div class="header_buttons">
+                        <div class="sumbit">
+                            <a href="#"><img src="images/touxiang.jpg" alt=""></a>
+                        </div>
+                        <div class="start"><a href="#">开通VIP</a></div>
+                        <div class="pay"><a href="#">充值</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!----------------------------------- 个人信息栏 --------------------------------------->
+        <div class="profile">
+            <div class="nav_inner">
+                <div class="profile_cover_link">
+                    <img id="" src="images/touxiang.jpg" alt="" class="profile_cover">
+                </div>
+                <h1 class="profile_title">
+                    <span class="profile_name">Lenahahh</span>
+                    <a href="https://y.qq.com/portal/vipportal/index.html">
+                        <img class="lv_icon" src="https://y.qq.com/music/icon/v1/mac/svip_g@2x.png?max_age=2592000" alt="4级绿钻过期">
+                    </a>
+                </h1>
+                <ul class="user_statistic">
+                    <li class="user_statistic_item" style="border-right: 1px solid #24313d;">
+                        <span class="user_statistic_number">15</span>
+                        <span class="user_statistic_title">关注</span>
+                    </li>
+                    <li class="user_statistic_item">
+                        <span class="user_statistic_number">1</span><br>
+                        <span class="user_statistic_title">粉丝</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    <!----------------------------------- 歌曲列表栏 ---------------------------------------->
+        <div class="main_profile">
+            <!------------------ 索引标题 -------------------->
+            <div class="profile_tab">
+                <a class="profile_tab_item" href="#">我的歌曲</a>
+                <a class="profile_tab_item" href="#">我的已购</a>
+                <a class="profile_tab_item" href="#">我创建的歌单</a>
+                <a class="profile_tab_item" href="#">关注</a>
+                <a class="profile_tab_item" href="#">粉丝</a>
+                <a class="profile_tab_item" href="#">我上传的视频</a>
+            </div>
+
+            <!------------------ 分支索引标题 -------------------->
+            <div class="js_box">
+                <div class="js_box_tab">
+                    <a class="js_box_tab_item" href="#">歌曲5</a>
+                    <a class="js_box_tab_item" href="#">歌单0</a>
+                    <a class="js_box_tab_item" href="#">专辑3</a>
+                    <a class="js_box_tab_item" href="#">视频0</a>
+                </div>
+
+                <!------- 歌单列表主要内容 -------->
+                <div class="profile_cont">
+                    <div class="js_sub">
+                        <!-- 功能按键 -->
+                        <div class="songlist_toolbar">
+                            <a class="btn_green" onclick="ALLSongPlay()">&nbsp;播放全部&nbsp;</a>
+                            <a class="btn" href="#">&nbsp;添加到&nbsp;</a>
+                            <a class="btn" href="#">&nbsp;下载&nbsp;</a>
+                            <a class="btn" href="#">&nbsp;批量操作&nbsp;</a>
+                        </div>
+
+                        <!-- 歌单列表 -->
+                        <div class="songlist">
+                            <table class="songlist_list" aria-colcount="5" aria-rowcount="5">
+                                <tbody>
+                                    <tr>
+                                        <td class="songlist_header_edit"> <input type="checkbox" class="checkAll" id="checkAll" onclick="CheckAll()"></td>
+                                        <td class="songlist_header_num"></td>
+                                        <td class="songlist_header_songname">歌曲</td>
+                                        <td class="songlist_header_artist">歌手</td>
+                                        <td class="songlist_header_album">专辑</td>
+                                        <td class="songlist_header_time">时长</td>
+                                        <td class="songlist_header_control">&nbsp;&nbsp;更多</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="songlist_edit"> <input type="checkbox" class="checkIn" id="c1"></td>
+                                        <td class="songlist_num"><em id="1" onclick="Audio_play(id)">1</em></td>
+                                        <td class="songlist_name" id="1_name">Every Day Dreamer</td>
+                                        <td class="songlist_artist" id="1_artist">Arto Kumanto</td>
+                                        <td class="songlist_album">Halo</td>
+                                        <td class="songlist_time">04:22</td>
+                                        <td class="songlist_control">
+                                            <div class="control">
+                                                <a class="cicon love"title="收藏" checked="true" id="l1"  onclick="Collect_songs('l1')"></a>
+                                                <a class="cicon more" title="更多"></a>
+                                                <a class="cicon dele" title="删除" onclick="Song_delete(this)"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="songlist_edit"> <input type="checkbox" class="checkIn" id="c2"></td>
+                                        <td class="songlist_num"><em id="2" onclick="Audio_play(id)">2</em></td>
+                                        <td class="songlist_songname" id="2_name">Maybe Tomorrow</td>
+                                        <td class="songlist_artist" id="2_artist">Arto Kumanto</td>
+                                        <td class="songlist_album">Closer</td>
+                                        <td class="songlist_time">03:45</td>
+                                        <td class="songlist_control">
+                                            <div class="control">
+                                                <a class="cicon love" title="收藏" id="l2"  onclick="Collect_songs('l2')"></a>
+                                                <a class="cicon more" title="更多"></a>
+                                                <a class="cicon dele" title="删除" onclick="Song_delete(this)"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="songlist_edit"> <input type="checkbox" class="checkIn" id="c3"></td>
+                                        <td class="songlist_num"><em id="3" onclick="Audio_play(id)">3</em></td>
+                                        <td class="songlist_songname" id="3_name">Good To Know</td>
+                                        <td class="songlist_artist" id="3_artist">Brady Harris</td>
+                                        <td class="songlist_album">Lone Star EP</td>
+                                        <td class="songlist_time">02:32</td>
+                                        <td class="songlist_control">
+                                            <div class="control">
+                                                <a class="cicon love" title="收藏" id="l3"  onclick="Collect_songs('l3')"></a>
+                                                <a class="cicon more" title="更多"></a>
+                                                <a class="cicon dele" title="删除" onclick="Song_delete(this)"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="songlist_edit"> <input type="checkbox" class="checkIn" id="c4"></td>
+                                        <td class="songlist_num"><em id="4" onclick="Audio_play(id)">4</em></td>
+                                        <td class="songlist_songname" id="4_name">Sad serenade</td>
+                                        <td class="songlist_artist" id="4_artist">Enrico Ciabatti</td>
+                                        <td class="songlist_album">Inaego</td>
+                                        <td class="songlist_time">03:09</td>
+                                        <td class="songlist_control">
+                                            <div class="control">
+                                                <a class="cicon love" title="收藏" id="l4"  onclick="Collect_songs('l4')"></a>
+                                                <a class="cicon more" title="更多"></a>
+                                                <a class="cicon dele" title="删除" onclick="Song_delete(this)"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="songlist_edit"> <input type="checkbox" class="checkIn" id="c5"></td>
+                                        <td class="songlist_num"><em id="5" onclick="Audio_play(id)">5</em></td>
+                                        <td class="songlist_songname" id="5_name">Monday 8am</td>
+                                        <td class="songlist_artist" id="5_artist">Kinematic</td>
+                                        <td class="songlist_album">Kinematic</td>
+                                        <td class="songlist_time">03:37</td>
+                                        <td class="songlist_control">
+                                            <div class="control">
+                                                <a class="cicon love" title="收藏" id="l5"  onclick="Collect_songs('l5')"></a>
+                                                <a class="cicon more" title="更多"></a>
+                                                <a class="cicon dele" title="删除" onclick="Song_delete(this)"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!----------------------------------- 底部音乐播放栏 ----------------------------------------->
+        <div class="bottom_profile">
+            <div class="bottom">
+                <div class="playerWrap">
+                    <!-------- 歌单信息 --------->
+                    <div class="playInfo">
+                        <div class="SongInfo">
+                            <a id="songName" class="songName">Every Day Dreamer</a>
+                            <strong>---</strong>
+                            <a id="songPlayer" class="songPlayer">Arto Kumanto</a>
+                        </div>
+                    </div>
+
+                    <!---------- 播放控件 ----------->
+                    <div class="Audio_Play">
+                        <audio id="mp3Btn" src="audio/1.mp3" controls="controls"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

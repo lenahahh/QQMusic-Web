@@ -1,0 +1,560 @@
+*{
+    margin: 0 auto;
+}
+/*----------------------------------导航栏-------------------------------------*/
+.header{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.nav_inner{
+    width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+.nav_top{
+    width: 1200px;
+    height: 90px;
+    border-bottom: 1px solid #F2F2F2;
+}
+.logo{
+    float: left;
+    width: 170px;
+    height: 52px;
+    padding-top: 22px;
+}
+.top_nav_item{
+    float: left;
+    overflow: hidden;
+}
+.top_nav_item{
+    list-style: none;
+    height: 90px;
+    padding: 0 20px 0 20px;
+}
+.top_nav_item li{
+    float: left;
+}
+.top_nav_item li a{
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    line-height: 90px;
+}
+.top_nav_item li a:hover{
+    color: #31c27c;
+}
+.top_nav_item li .current{/*音乐馆*/
+    background-color: #31c27c;
+    color: white;
+}
+.top_nav_item li .current:hover{
+    color: white;
+}
+.search{
+    width: 222px;
+    height: 66px;
+    float: left;
+    overflow: hidden;
+}
+.search_input{
+    width: 174px;
+    height: 36px;
+    padding-left: 11px;
+    padding-right: 33px;
+    margin-top: 26px;
+    text-shadow: none;
+    border: 2px solid #999;
+    border-radius: 2px;
+    font-size: 14px;
+    position: relative;
+}
+.search_input input{
+    border: 0px;
+    padding: 0;
+    margin: 0;
+    width: 174px;
+    height: 36px;
+    vertical-align: middle;
+}
+.find{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.header_buttons{
+    width: 263px;
+    height: 90px;
+    float: right;
+}
+.header_buttons a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.header_buttons a:link{
+    color: #333;
+}
+.header_buttons .sumbit{
+    float: left;
+    margin-top: 0px;
+    line-height: 90px;
+}
+.header_buttons .sumbit a img{
+    width: 40px;
+    height: 40px;
+    margin-top: 22px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.header_buttons .start{
+    float: left;
+    width: 91px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    padding: 0 9px;
+    margin:24px 0px 0px 10px;
+    border:2px solid #31c27c;
+    background-color: #31c27c;
+    border-radius: 3px;
+}
+.header_buttons .start a{
+    color: white;
+}
+.header_buttons .start:hover{
+    background-color: #31c27c;
+}
+.header_buttons .pay{
+    float: left;
+    width: 65px;
+    height: 36px;
+    border:2px solid #ccc;
+    color: #333;
+    padding: 0 9px;
+    margin:24px 0px 0px 10px; 
+    text-align: center;
+    line-height: 36px;
+    border-radius: 3px;
+}
+.header_buttons .pay a{
+    color: #333;
+}
+.header_buttons .pay:hover{
+    background-color: #ededed;
+}
+.nav_bottom{
+    width: 1200px;
+    height: 51px;
+    padding-left:230px;
+    list-style: none;
+}
+.nav_bottom li{
+    float: left;
+    margin-right: 47px;
+    line-height: 50px;
+    text-align: center;
+}
+.nav_bottom li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+.nav_bottom li .current{
+    color: #31c27c;
+}
+.nav_bottom li a:hover{
+    color: #31c27c;
+}
+
+
+/*-------------------------------歌单推荐-----------------------------*/
+.Hot_song_list{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-image: linear-gradient(#f3f3f3, white);
+}
+.index_title{
+    padding: 50px 0 24px 0px;
+}
+.index_title h2{
+    margin: 0 auto;
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+}
+.index_more{
+    position: absolute;
+    right: 0;
+    top: auto;
+    text-decoration: none;
+}
+.index_tab{height: 50px;}
+.index_tab a{
+    text-decoration: none;
+    margin: 0 24px;
+}
+.index_tab a:hover{
+    color: #31c27c;
+}
+.index_tab .current{
+    color: #31c27c;
+}
+#hot_song_list{height: 348px;}
+.playlist{
+    width: 6100px;
+    height: 300px;
+    margin-bottom: 10px;
+    position:absolute;
+}
+.playlist ul{
+    list-style: none;
+    padding: 0px;
+}
+.playlist ul li{
+    position: relative;
+    float: left;
+    width: 244px;
+    height: 310px;
+    overflow: hidden;
+}
+.playlist ul li .playlist_item_box{
+    width: 224px;
+    margin-right: 20px;
+}
+.playlist ul li .playlist_item_box .playlist_cover{
+    width: 224px;
+    margin-bottom: 15px;
+}
+.playlist_cover a img{
+    width: 224px;
+    height: 224px;
+}
+.playlist_title{
+    font-size: 100%;
+    width: 224px;
+}
+.playlist_title a{
+    float: left;
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;/*显示省略符号来代表被修剪的文本。*/
+    line-height: 22px;
+    max-height: 44px;
+    text-decoration: none;
+}
+.playlist_title a:link,a:visited{
+    color: #333;
+}
+.playlist_other{
+    float: left;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 22px;
+    font-size: 14px;
+}
+
+/*--------------------------------新歌首发------------------------------------*/
+.New_song{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-image: linear-gradient(#f3f3f3, white);   /*渐变色*/
+}
+.newsongs{
+    width: 1220px;
+    height: 334px;
+    margin-bottom: 20px;
+}
+.newsongs ul{
+    width: 1220px;
+    height: 334px;
+    list-style: none;
+    margin-top: 40px;
+    padding: 0;
+}
+.newsongs ul li{
+    width: 33.333%;
+    height: 86px;
+    float: left;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+    border-top: 1px solid #ededed;
+    padding: 10px 0 10px 0;
+}
+.newsongs ul .firstline{
+    border-top: none;
+}
+.newsongs ul li img{
+    width: 86px;
+    height: 86px;
+    float: left;
+}
+.newsongs ul li a{
+    display: block;
+    width: 200px;
+    line-height: 22px;
+    float: left;
+    padding: 20px 0 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+.newsongs ul li .songer{
+    color: #999;
+    padding-top: 0px;
+}
+.newsongs ul li a:hover{
+    color:#31c27c;
+}
+
+.newsongs ul li span{
+    display: block;
+    position: absolute;
+    right: 35px;
+    top: 45px;
+    color: #999;
+    font-family: "poppin";
+
+}
+
+/*---------------------------------------精彩推荐-----------------------------------------*/
+.Event_recomment{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-image: linear-gradient(#f3f3f3, white);
+}
+.Slide_inner{
+    width: 1220px;
+    overflow: hidden;/*用于隐藏超出的列表 */
+    position: relative;
+}
+#event_recomment{
+    height: 294px;
+}
+.eventlist{
+    width: 6100px;
+    height: 236px;
+    margin-bottom: 10px;
+    position: absolute;
+}
+.eventlist ul{
+    list-style: none;
+    height: 236px;
+    padding: 0;
+}
+.eventlist ul .eventlist_item{
+    width: 590px;
+    height: 236px;
+    padding-right: 20px;
+    float: left;
+}
+.eventlist ul .eventlist_item a,.eventlist ul .eventlist_item img{
+    width: 590px;
+    height: 236px;
+}
+
+
+/*---------------------------------------新碟首发--------------------------------------*/
+.New_album{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-image: linear-gradient(#f3f3f3, white);
+}
+
+#new_album{height: 348px;}
+.albumlist{
+    width: 6100px;
+    height: 300px;
+    margin-bottom: 10px;
+    position:absolute;
+}
+.albumlist ul{
+    list-style: none;
+    padding: 0px;
+}
+.albumlist ul li{
+    position: relative;
+    float: left;
+    width: 244px;
+    height: 310px;
+    overflow: hidden;
+}
+.albumlist ul li .albumlist_item_box{
+    width: 224px;
+    margin-right: 20px;
+}
+.albumlist ul li .albumlist_item_box .albumlist_cover{
+    width: 224px;
+    margin-bottom: 15px;
+}
+.albumlist_cover a img{
+    width: 224px;
+    height: 224px;
+}
+.albumlist_title{
+    font-size: 100%;
+    width: 224px;
+}
+.albumlist_title a{
+    float: left;
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;/*显示省略符号来代表被修剪的文本。*/
+    line-height: 22px;
+    max-height: 44px;
+    text-decoration: none;
+}
+.albumlist_title a:link,a:visited{
+    color: #333;
+}
+.albumlist_other{
+    float: left;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 22px;
+    font-size: 14px;
+}
+
+/*-------------------------------------------轮播图-------------------------------------------*/
+.slide_switch{
+    position: absolute;
+    bottom: 0;;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+.slide_switch .buttons{
+    width: 100px;
+    height: 10px;
+    padding-bottom: 28px;
+}
+.slide_switch .buttons span{
+    cursor: pointer;
+    float: left;
+    border: 1px solid #999;
+    width: 8px;
+    height: 8px;
+    border-radius: 12px;
+    background-color: #f3f3f3;
+    margin: 0px 10px;
+    text-align: center;
+}
+.slide_switch .buttons .on{background-color: #333;}
+
+.slide_action{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 2;
+    bottom: 0;
+}
+.arrow{
+    cursor: pointer;/*手型鼠标，当鼠标移到这个控件的时候会变成手型鼠标*/
+    display: none;
+    position:absolute;
+    top: 170px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 50px;
+    font-weight: lighter;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .2);/*rgb颜色+透明度*/
+    color: black;
+    text-decoration: none;
+}
+.arrow:hover{background-color: rgba(0, 0, 0, .3);}
+.Event_recomment:hover .arrow{display: block;}
+.Hot_song_list:hover .arrow{display: block;}
+.prev{left: 0px;}
+.next{right: 0px;}
+
+
+/*-----------------------------------------尾部-------------------------------------------*/
+.footer{
+    width: 100%;
+    background-color: #333;
+    font-family:  "poppin";
+}
+.footer .footer_copyright p{
+    line-height: 28px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
+.footer .footer_copyright p a{
+    text-decoration: none;
+    color: #999;
+    padding: 0 2px;
+
+}
+.footer .footer_copyright p a:hover{
+    color: #31c27c;
+}
+
+/*--------------------------------------右侧反馈条-------------------------------------------*/
+.feedback{
+    width: 40px;
+    height: 130px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+.feedback a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    background-color: #fff;
+    transition: all 0.6s;
+    filter: brightness(100%);
+}
+.feedback a:hover{
+    background-color: #fff;
+    color: #31c27c;
+    filter: brightness(90%);
+}
+.feedback a span{
+    display: block;
+    width: 18px;
+    height: 10px;
+    margin: 15px 10px 0 10px;
+    background-image: url(images/up.png);
+    background-repeat: no-repeat;
+    width: 30px;
+    line-height: 22px;
+    background-image: none;
+    margin:10px 10px 10px 5px;
+}
+
+/*----------------------------------右侧客户端窗口-----------------------------------*/
+.khd_windows {
+	width: 144px;
+	height: 96px;
+	top:100px;
+	background-color: #f3f3f3;
+    /*display:block;*/
+    position:fixed;
+    right:100px;
+}

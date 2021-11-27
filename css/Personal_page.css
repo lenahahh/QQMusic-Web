@@ -1,0 +1,308 @@
+/*------------------------------ 个人信息栏 ----------------------------*/
+.profile{
+    height: 315px;
+    padding-top: 65px;
+    background: url(../images/bg_profile.bd497b5a.jpg) 50% no-repeat; 
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.profile_cover_link{
+    width: 102px;
+    height: 102px;
+    margin: 0 auto;
+}
+.profile_cover_link img{
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+.profile_title{
+    width: 1200px;
+    height: 64px;
+    margin-top: 10px;
+}
+.profile_name{font-size: 30px;}
+.profile_title img{
+    width: 36px;
+    height: 36px;
+}
+.user_statistic{
+    height: 40px;
+    list-style: none;
+    padding: 0 517px;
+}
+.user_statistic_item{
+    position: relative;
+    width: 32px;
+    height: 43px;
+    float: left;
+    padding: 0 25px;
+    text-align: center;
+}
+.user_statistic__number {
+    width: 32px;
+    height: 28px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: -1px;
+    font-weight: 400;
+    color: #fff;
+}
+.user_statistic__tit {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}
+.main_profile{
+    width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.profile_tab{
+    position: absolute;
+    top: -56px;
+    left: 0;
+    margin-bottom: 0;
+    width: 80%;
+    height: 56px;
+    line-height: 56px;
+    overflow: hidden;
+    border-bottom: 1px solid #f7f7f7;
+}
+.profile_tab_item{
+    position: relative;
+    float: left;
+    font-size: 16px;
+    overflow: hidden;
+    height: 56px;
+    line-height: 56px;
+    text-decoration: none;
+    margin-right: 40px;
+    color: white;
+}
+.profile_tab_item:link{color: white;}
+.profile_tab_item:visited{color: white;}
+.profile_tab_item:hover{
+    color: #31c27c;
+}
+.js_box{
+    width: 1200px;
+    height: 500px;
+    position: relative;
+    padding: 0;
+}
+.js_box_tab{
+    position: relative;
+    top: 0px;
+    left: 0;
+    margin-bottom: 0;
+    height: 56px;
+    line-height: 56px;
+    overflow: hidden;
+    border-bottom: 1px solid #f7f7f7;
+}
+.js_box_tab_item{
+    position: relative;
+    float: left;
+    font-size: 16px;
+    overflow: hidden;
+    height: 56px;
+    line-height: 56px;
+    text-decoration: none;
+    color: black;
+    margin-right: 55px;
+}
+.js_box_tab_item:hover{
+    color: #31c27c;
+}
+.profile_cont,.js_sub{
+    width: 1200px;
+    height: 50px;
+    padding: 0;
+}
+.songlist_toolbar{
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 0;
+    padding-top: 30px;
+    width: 1200px;
+    height: 38px;
+}
+.btn, .btn_green {
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 23px;
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-decoration: none;
+}
+.btn_green{
+    border: 1px solid #31c27c;
+    background-color: #31c27c;
+    color: #fff;
+}
+.btn_green:hover(){
+    cursor: pointer;
+}
+.btn {
+    border: 1px solid #c9c9c9;
+    color: #000;
+}
+
+/*--------------------------------歌曲列表效果----------------------------*/
+.songlist{
+    position: relative;
+    width: 1200px;
+    height: 590px;
+}
+.songlist_list{
+    width: 1200px;
+    line-height: 50px;
+    background-color: rgba(0,0,0,.01);
+    color: #999;
+    position: relative;
+    float: left;
+}
+.songlist_list tbody{
+    width: 1200px;
+    padding: 0;
+}
+.songlist_list tbody td{padding: 0;}
+
+/* 歌单列表行样式 */
+.songlist_edit,.songlist_header_edit{
+    position: relative;
+    width: 3%;
+    text-align: center;
+    vertical-align: bottom;
+}
+.checkAll,.checkIn{
+    width: 16px;
+    height: 16px;
+}
+.songlist_num,.songlist_header_num{
+    width: 4%;
+    text-align: center;
+}
+.songlist_num em{
+    font-style: normal;
+    font-family: Arial;
+}
+.songlist_list tr:hover .songlist_num em{
+    cursor: pointer;
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 0 9px;
+    background: url("../images/play.png") 0 0;
+    line-height: 36px;
+    color:transparent;
+}
+.songlist_name,.songlist_header_name{
+    width: 34%;
+    overflow: hidden;/*超出文本部分自动隐藏*/
+    white-space: nowrap;/*不允许文本换行*/
+    text-overflow: ellipsis;/*超出部分以省略号显示*/
+} 
+.songlist_artist,.songlist_album,.songlist_header_artist,.songlist_header_album{
+    width: 22%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.songlist_time,.songlist_header_time{
+    width: 5%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} 
+.songlist_control,.songlist_header_control{
+    width: 10%;
+}
+.control{
+    width: 118px;
+    height: 36px;
+    margin: 0;
+    text-align: center;
+}
+.cicon{
+    cursor: pointer;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0 2px;
+    background:url("../images/T1bMh.FxNXXXb_r3IF-72-730.png") no-repeat;
+}
+.love{background-position: 0 -231px;}
+.love:hover{background-position: 0 -195px;}
+.more{background-position: 0 -709px;}
+.more:hover{background-position: -42px -709px;}
+.dele{background-position: 0 -736px;}
+.dele:hover{background-position: -42px -736px;}
+
+
+/*--------------------------------- 底部音乐播放栏 --------------------------*/
+.bottom_profile{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid #999;
+    z-index: 2;
+    background-color: #f5f5f5;
+}
+.bottom{
+    width: 1200px;
+    z-index: 2;
+}
+.playerWrap{
+    position: relative;
+    height: 80px;
+    padding-left: 500px;
+}
+.playInfo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 90px;
+}
+.SongInfo{
+    position: relative;
+    width: 100%;
+    height:90px;
+    padding: 30px 20px;
+    color: #fff;
+}
+.SongInfo a,.SongInfo strong{
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin: 10px 10px;
+    color: #000;
+}
+.SongInfo a{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.Audio_Play{
+    height: 90px;
+}
+#mp3Btn{
+    position: absolute;
+    top: -10px;
+    width: 700px;
+    height: 80px;
+}
